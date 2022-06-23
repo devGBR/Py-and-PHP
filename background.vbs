@@ -1,2 +1,2 @@
 Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run "ilovePDF.py", 0
+WshShell.Run "C:\Windows\System32\cmd.exe", 0

@@ -2,8 +2,10 @@
     $file = $_POST['file'];
     $feedback = "";
     function compress_file($arg) {
-        $command = escapeshellcmd("script.py");  
-        $start = shell_exec($command);
+        $file = $arg;
+        $script = 'ilovePDF.py';
+        $prompt = 'C:\\Windows\\System32\\cmd.exe';
+        $start = shell_exec("$prompt $command $file");
         if (!empty($start)) {
             return 'Compressão Realizada com Sucesso!';
         } else {

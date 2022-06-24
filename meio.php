@@ -3,10 +3,15 @@
     $feedback = "";
     function compress_file($arg) {
         $file = $arg;
-        $script = 'ilovePDF.py';
-        $prompt = 'C:\\Windows\\System32\\cmd.exe';
-        $start = shell_exec("$prompt $command $file");
-        if (!empty($start)) {
+        $script = 'C:\\Users\\Estagiario\\Desktop\\Py and PHP\\ilovePDF.py';
+        $prompt = 'C:\\Users\\Estagiario\\AppData\\Local\\Programs\\Python\\Python310\\python.exe';
+        $start = shell_exec("$prompt $script $file");
+        if (!empty($arg)) {
+            return 'Compressão Realizada com Sucesso!';
+        } else {
+            return 'Erro ao Compressar!';
+        }
+        if ($start != null){
             return 'Compressão Realizada com Sucesso!';
         } else {
             return 'Erro ao Compressar!';
